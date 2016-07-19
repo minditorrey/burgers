@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Starter Template</title>
+  <link rel="stylesheet" href="/bower_components/foundation-sites/dist/foundation.css" />
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<h1>Bob's Burgers!!!</h1>
-  
+  <section class="row" id="tag">
+    <div class="small-6 columns align-self-middle">
+      <h1>Waggish</h1>
+
+    </div>    
+    <div class="small-6 columns">
+      <h2>Great lines from your favorite Bob's Burgers characters.</h2>
+      <p>Select a character and laugh your head off reminiscing.</p>
+    </div>
+  </section>
+
+  <section id="characters"> 
+    <div class="row small-up-2">
+      <div class="column green">
+        <img src="../images/bob.jpg" alt="">
+      </div>
+      <div class="column orange">
+        <img src="../images/linda.jpg" alt="">
+      </div>
+    </div>
+    <div class="row small-up-1">
+      <div class="column blue">
+        <img id="tina" src="../images/tina.jpeg" alt="">
+      </div>  
+    </div>
+    <div class="row small-up-2">
+      <div class="column purple">
+        <img src="../images/louise.jpg" alt="">
+      </div>
+      <div class="column red">
+        <img src="../images/gene.jpeg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/what-input/what-input.min.js"></script>
+  <script src="/bower_components/foundation-sites/dist/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>

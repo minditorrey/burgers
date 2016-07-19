@@ -1,0 +1,115 @@
+
+
+body {
+	background-color: #4A474E;
+	color: white;
+}
+
+.row {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+img {
+	height: 475px;
+	width: 90%;
+	padding: 10%;
+	border: none;
+	max-width: 550px;
+}
+
+#tag {
+	width: 100%;
+	margin-bottom: 5%;
+	height: 20%;
+}
+
+#tag .tagline {
+	margin-left: 55%;
+	margin-top: -7%;
+	color: #E58E3D;;
+}
+
+#tag div h2 {
+	color: white;
+	font-size: 1.5em;
+	min-height: 125px;
+	max-height: 125px;
+	padding-top: 30px;
+}
+
+#tag div p {
+	margin-top: -5%;
+}
+
+#tag div h1 {
+	color: white;
+	font-size: 5em;
+}
+
+#characters {
+	margin-bottom: 10%;
+}
+
+#characters div {
+	text-align: center;
+}
+
+#characters #tina {
+	padding: 6%;
+}
+
+.blue {
+	background-color: #2A7FB8;
+
+}
+
+.red {
+	background-color: #E84C3D;
+}
+
+.purple {
+	background-color: #59589E;
+
+}
+.green {
+	background-color: #9FB93E;
+}
+
+.orange {
+	background-color: #E58E3D;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  	#characters div {
+  		height: 275px;
+  	}
+
+  	img {
+  		height: 225px;
+  		max-width: 350px;
+  	}
+  	#tag div h1 {
+    	font-size: 2.6em;
+    	min-height: 100px;
+		max-height: 100px;
+		font-weight: bold;
+		margin-top: 15%;
+  	}
+  	#tag div h2 {
+    	font-size: 1.2em;
+    	min-height: 100px;
+		max-height: 100px;
+  	}
+
+  	#tag div p {
+  		margin-top: 10%;
+    	font-size: 1em;
+    	min-height: 100px;
+		max-height: 100px;
+  	}
+
+
+}
+
