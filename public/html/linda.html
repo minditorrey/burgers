@@ -1,0 +1,22 @@
+
+<section id="lindas">
+	<h2>Linda Belcher</h2>
+	<img src="../images/bobsFamily.png" alt="">
+	<div class="each">
+    	<ul ng-class-even="'orange'" ng-class-odd="'purple'" ng-repeat="linda in lindas | filter:search">
+    		<li class="quote">Linda: "{{linda.quote}}"</li>
+    		<li class="episode">Season {{linda.season}}, Episode {{linda.episode}}</li>
+    		<div class="quotesRow row">
+    			<div class="column small-3">
+    				<label for="lindaLikes"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{linda.likes}}</label>	
+    				<a id="lindaLikes" ng-click="likeIt(linda)" class="button small round like">Like</a>		
+    			</div>
+    			<div class="likeBtns column small-3">
+    				<label for="lindaDislikes"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{linda.dislikes}}</label>	
+    				<a id="lindaDislikes" ng-click="dislikeIt(linda)" class="button small round like">Dislike</a>	
+    			</div>
+    			<div class="column small-6"></div>
+    		</div>
+    	</ul>
+    </div>
+</section>

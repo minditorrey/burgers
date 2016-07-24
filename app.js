@@ -11,7 +11,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 
-const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/connectApp';
+const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/burgersApp';
 
 mongoose.connect(MONGOURL, err => {
   console.log(err || `Connected to MongoDB at ${MONGOURL}`)
@@ -28,10 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', require('./routes/api'));
 app.use('/', require('./routes/index'));
 
-
-
-// instagram.set('client_id', instagram_client_id);
-// instagram.set('client_secret', instagram_client_secret);
 
 var server = http.createServer(app);
 

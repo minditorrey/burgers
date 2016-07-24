@@ -1,16 +1,19 @@
 
-
 body {
 	background-color: #4A474E;
 	color: white;
 }
 
+section h1, h2, h3, h4, h5, h6, label {
+	color: white;
+}
 .row {
 	margin-top: 0;
 	margin-bottom: 0;
 }
-img {
-	height: 475px;
+
+#characters img {
+	height: 575px;
 	width: 90%;
 	padding: 10%;
 	border: none;
@@ -43,7 +46,8 @@ img {
 
 #tag div h1 {
 	color: white;
-	font-size: 5em;
+	font-size: 6em;
+	font-family: 'Indie Flower', cursive;
 }
 
 #characters {
@@ -79,21 +83,60 @@ img {
 	background-color: #E58E3D;
 }
 
+#bobs ul li.quote, #lindas ul li.quote {
+	font-size: 1.3em;
+}
+
+#bobs h2, #lindas h2 {
+	margin: 2% 0 2% 2%;
+
+}
+
+#bobs img, #lindas img {
+	width: 100%;
+	height: 450px;
+}
+
+#bobs ul li.episode, #lindas ul li.episode {
+	font-size: .8em;
+	margin-bottom: 5%;
+}
+
+#bobs div ul a.button, #lindas div ul a.button {
+	background-color: #2A7FB8;
+	display: inline-block;
+
+}
+
+#bobs div.each, #lindas div.each {
+	margin-top: 5%;
+
+}
+
+#bobs div ul, #lindas div ul {
+	list-style-type: none;
+	padding: 15px;
+
+}
+
+#bobs div.quotesRow, #lindas div.quotesRow {
+	margin-top: -2%;
+}
+
+#bobs i.fa, #lindas i.fa {
+	margin-left: 10%;
+}
+
+
 
 
 @media screen and (max-width: 800px) {
-  	#characters div {
-  		height: 275px;
-  	}
-
-  	img {
-  		height: 225px;
+  	#characters img {
+  		height: 325px;
   		max-width: 350px;
   	}
   	#tag div h1 {
-    	font-size: 2.6em;
-    	min-height: 100px;
-		max-height: 100px;
+    	font-size: 3.6em;
 		font-weight: bold;
 		margin-top: 15%;
   	}
@@ -110,6 +153,32 @@ img {
 		max-height: 100px;
   	}
 
+	#bobs img, #lindas img {
+		width: 100%;
+		height: 300px;
+	}
+	#bobLikes, #lindaLikes {
+		width: 80%;
+		font-size: .6em;
+		padding: 1em;
+		padding-right: 3em;
+		margin-right: 5%;
 
+	}
+	#bobDislikes, #lindaDislikes {
+		width: 80%;
+		font-size: .6em;
+		padding: 1em;
+		padding-right: 4em;
+
+	}
+	
+	#bobs div label.fa, #lindas div label.fa {
+		font-size: .8em;
+
+	}
+	#bobs div.quotesRow, #lindas div.quotesRow {
+		text-align: center;
+	}
 }
 

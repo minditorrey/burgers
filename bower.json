@@ -15,6 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "^6.2.3"
+    "foundation-sites": "^6.2.3",
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "foundation": "^5.5.3",
+    "angulike": "^1.2.0"
   }
 }
