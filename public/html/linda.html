@@ -1,6 +1,7 @@
 
 <section id="lindas">
 	<h2>Linda Belcher</h2>
+	<a class="home" ui-sref='home'><i class="fa fa-home" aria-hidden="true"></i>Home</a>
 	<img src="../images/bobsFamily.png" alt="">
 	<div class="each">
     	<ul ng-class-even="'orange'" ng-class-odd="'purple'" ng-repeat="linda in lindas | filter:search">
@@ -15,7 +16,9 @@
     				<label for="lindaDislikes"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{linda.dislikes}}</label>	
     				<a id="lindaDislikes" ng-click="dislikeIt(linda)" class="button small round like">Dislike</a>	
     			</div>
-    			<div class="column small-6"></div>
+    			<div class="top column small-6">
+    				<a class="top" ng-click="scrollTo('top')"><i class="fa fa-arrow-up" aria-hidden="true"></i> back to top</a>
+    			</div>
     		</div>
     	</ul>
     </div>

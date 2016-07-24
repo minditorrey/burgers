@@ -6,7 +6,7 @@ app.controller('homeController', function($scope, $state, $stateParams) {
 
 });
 
-app.controller('bobController', function($scope, $state, $stateParams, bobService) {
+app.controller('bobController', function($scope, $state, $stateParams, $location, $anchorScroll, bobService) {
 	bobService.getAll()
     .then(res => {
         $scope.bobs = res.data;
@@ -41,6 +41,11 @@ app.controller('bobController', function($scope, $state, $stateParams, bobServic
 		})
 		
 	}
+	
+	$scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+    } 
 
 });
 

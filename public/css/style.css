@@ -7,9 +7,26 @@ body {
 section h1, h2, h3, h4, h5, h6, label {
 	color: white;
 }
+
+a i.fa-home {
+	display: inline;
+	font-size: 2.5em;
+	margin-top: -5%;
+}
 .row {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+#header img {
+	float: left;
+	margin-top: 4%;
+	margin-right: 2%;
+}
+
+#header h1 {
+	position: relative;
+	top: 10px;
 }
 
 #characters img {
@@ -22,7 +39,7 @@ section h1, h2, h3, h4, h5, h6, label {
 
 #tag {
 	width: 100%;
-	margin-bottom: 5%;
+	margin-bottom: 3%;
 	height: 20%;
 }
 
@@ -83,13 +100,28 @@ section h1, h2, h3, h4, h5, h6, label {
 	background-color: #E58E3D;
 }
 
+.top {
+	color: #fff;
+	margin-top: 0;
+	margin-left: 50%;
+}
+
+.top:hover {
+	color: #5F9FCF;
+}
+
+.home {
+	float: right;
+	margin: -55px 10% 0 0;
+	color: #fff;
+}
+
 #bobs ul li.quote, #lindas ul li.quote {
 	font-size: 1.3em;
 }
 
 #bobs h2, #lindas h2 {
 	margin: 2% 0 2% 2%;
-
 }
 
 #bobs img, #lindas img {
@@ -105,18 +137,20 @@ section h1, h2, h3, h4, h5, h6, label {
 #bobs div ul a.button, #lindas div ul a.button {
 	background-color: #2A7FB8;
 	display: inline-block;
+}
 
+#bobs div ul a.button:hover, #lindas div ul a.button:hover {
+	background-color: #1c577f;
+	display: inline-block;
 }
 
 #bobs div.each, #lindas div.each {
 	margin-top: 5%;
-
 }
 
 #bobs div ul, #lindas div ul {
 	list-style-type: none;
 	padding: 15px;
-
 }
 
 #bobs div.quotesRow, #lindas div.quotesRow {
@@ -170,7 +204,6 @@ section h1, h2, h3, h4, h5, h6, label {
 		font-size: .6em;
 		padding: 1em;
 		padding-right: 4em;
-
 	}
 	
 	#bobs div label.fa, #lindas div label.fa {
@@ -180,5 +213,26 @@ section h1, h2, h3, h4, h5, h6, label {
 	#bobs div.quotesRow, #lindas div.quotesRow {
 		text-align: center;
 	}
+
+	#tag {
+		margin-bottom: 0;
+	}
+
+	#tag #header h1 {
+		font-size: 3em;
+		margin-top: 3%;
+	}
+
+	#tag #header img {
+		width: 45px;
+		margin-top: 6%;
+	}
+
+@media screen and (max-width: 400px) {
+	#tag #header img {
+		width: 45px;
+		margin-top: 10%;
+	}
+}
 }
 
