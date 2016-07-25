@@ -18,10 +18,31 @@ a i.fa-home {
 	margin-bottom: 0;
 }
 
-#header img {
-	float: left;
-	margin-top: 4%;
-	margin-right: 2%;
+#socialLinks div.row {
+	display: inline-block;
+}
+
+.fb, .tweet, .pin {
+	margin-bottom: 1%;
+	margin-left: 1%;
+	margin-bottom: 3%;
+}
+
+footer {
+	background-color: #2A7FB8;
+	padding: 25px;
+	font-size: .8em;
+	text-align: center;
+}
+
+#characters #burger {
+	width: 10%;
+	height: 40px;
+	max-width: 50px;
+	padding: 0;
+	float:left;
+	margin-left: 2%;
+	margin-right: 1%;
 }
 
 #header h1 {
@@ -35,6 +56,10 @@ a i.fa-home {
 	padding: 10%;
 	border: none;
 	max-width: 550px;
+}
+
+#characters h2 {
+	margin-left: 2%;
 }
 
 #tag {
@@ -67,12 +92,16 @@ a i.fa-home {
 	font-family: 'Indie Flower', cursive;
 }
 
-#characters {
-	margin-bottom: 10%;
+#characters div.column {
+	text-align: center;
 }
 
-#characters div {
-	text-align: center;
+#characters {
+	margin-bottom: 5%;
+}
+
+#characters div.row p {
+	margin-left: 5px;
 }
 
 #characters #tina {

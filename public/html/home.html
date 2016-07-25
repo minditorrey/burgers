@@ -1,15 +1,16 @@
   <section class="row" id="tag">
     <div id="header" class="small-12 columns align-self-middle">
-      <img class="burger animated rotateIn" width="80" src="../images/burger.png" alt="">
+
       <h1>The Belchers</h1>
     </div>
   </section>    
 
   <section id="characters"> 
     <div class="row blue small-12">
-      <div>
+      <div id="subheader">
         <h2>Great lines from your favorite Bob's Burgers characters.</h2>
-        <p>Select a character and laugh your buttcheeks off.</p>
+        <img width="60" id="burger" class="animated rotateIn" src="../images/burger.png" alt="">
+        <p> Select a character and laugh your buttcheeks off.</p>
       </div>
     </div>
     <div class="row">
@@ -33,4 +34,15 @@
         <a ui-sref="gene"><img src="../images/gene.png" alt="cartoon image of Gene Belcher"></a>
       </div>
     </div>
+  </section>
+  
+  <section>  
+  <div id='socialLinks'>
+    <div class="row media">
+      <div class="fb column small-2" fb-like="myModel.Url"></div> 
+      <div class="tweet column small-2" tweet="myModel.Name" tweet-url="myModel.Url"></div> 
+      <div class="pin column small-2" pin-it="myModel.Name" pin-it-image="myModel.ImageUrl"></div>
+      <div class="column small-6"></div> 
+    </div>
+  </div>
   </section>

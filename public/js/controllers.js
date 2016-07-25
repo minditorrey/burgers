@@ -3,7 +3,11 @@
 var app = angular.module('burgersApp');
 
 app.controller('homeController', function($scope, $state, $stateParams) {
-
+    $scope.myModel = {
+        Url: 'https://thebelchers.herokuapp.com/#/',
+        Name: "Check out The Belcher's Best Quotes!",
+        ImageUrl: "https://upload.wikimedia.org/wikipedia/en/7/7f/Bob's_Burgers_promo.png"
+    };
 });
 
 app.controller('bobController', function($scope, $state, $stateParams, $location, $anchorScroll, bobService) {
@@ -99,12 +103,6 @@ app.controller('louiseController', function($scope, $state, $location, $anchorSc
     .catch(err => {
         console.log('err:', err);
     });
-	
-	      
-    $scope.myModel = {
-        Url: 'http://www.linkd.us/#/',
-        Name: "I like linkd!"
-    };
       
 	$scope.likeIt = (louise) => {
 		louise.likes += 1;
