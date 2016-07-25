@@ -1,4 +1,5 @@
 var app = angular.module('burgersApp', ['ui.router', 'angulike']);
+$(document).foundation();
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
