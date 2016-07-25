@@ -96,8 +96,40 @@ app.controller('lindaController', function($scope, $state, $stateParams, lindaSe
 
 });
 
-app.controller('tinaController', function($scope, $state, $stateParams) {
+app.controller('tinaController', function($scope, $state, $stateParams, tinaService) {
+	tinaService.getAll()
+    .then(res => {
+        $scope.tinas = res.data;
+        var tinas = $scope.tinas;
+        console.log(tinas);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+	
+	      
+    $scope.myModel = {
+        Url: 'http://www.linkd.us/#/',
+        Name: "I like linkd!"
+    };
+      
+	$scope.likeIt = (tina) => {
+		tina.likes += 1;
+		console.log('likes:', tina.likes);
+		tinaService.updateLikes(tina)
+		.then(res => {
+			console.log('tina.likes:', $scope.tinas.likes);
 
+		})
+	}	
+	$scope.dislikeIt = (tina) => {
+		tina.dislikes += 1;
+		tinaService.updateDislikes(tina)
+		.then(res => {
+			console.log('tina.dislikes:', $scope.tinas.dislikes);
+		})
+		
+	}
 
 });
 

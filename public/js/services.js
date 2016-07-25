@@ -26,3 +26,15 @@ app.service('lindaService', function($http) {
     }
 })
 
+app.service('tinaService', function($http) {
+    this.getAll = () => {
+      return $http.get('/api/tina');
+    };
+    this.updateLikes = tina => {
+      return $http.put(`/api/tina/likes/${tina._id}`, tina);
+    }
+    this.updateDislikes = tina => {
+      return $http.put(`/api/tina/dislikes/${tina._id}`, tina);
+    }
+})
+

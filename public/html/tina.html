@@ -1,7 +1,25 @@
-<h1>Tina</h1>
 
-    <ul ng-repeat="tina in tinas">
-    	<li>{{tina.quote}}</li>
-    	<li>{{tina.season}}</li>
-    	<li>{{tina.episode}}</li>
-    </ul>
+<section id="tinas">
+	<h2>Tina Belcher</h2>
+	<a class="home" ui-sref='home'><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+	<img src="../images/belchers.jpg" alt="">
+	<div class="each">
+    	<ul ng-class-even="'orange'" ng-class-odd="'purple'" ng-repeat="tina in tinas | filter:search">
+    		<li class="quote">tina: "{{tina.quote}}"</li>
+    		<li class="episode">Season {{tina.season}}, Episode {{tina.episode}}</li>
+    		<div class="quotesRow row">
+    			<div class="column small-3">
+    				<label for="tinaLikes"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{tina.likes}}</label>	
+    				<a id="tinaLikes" ng-click="likeIt(tina)" class="button small round like">Like</a>
+    			</div>
+    			<div class="likeBtns column small-3">
+    				<label for="tinaDislikes"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{tina.dislikes}}</label>	
+    				<a id="tinaDislikes" ng-click="dislikeIt(tina)" class="button small round like">Dislike</a>	
+    			</div>
+    			<div class="top column small-6">
+    				<a class="top" ng-click="scrollTo('top')"><i class="fa fa-arrow-up" aria-hidden="true"></i> back to top</a>
+    			</div>
+    		</div>
+    	</ul>
+    </div>
+</section>
