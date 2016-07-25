@@ -49,17 +49,52 @@ app.controller('bobController', function($scope, $state, $stateParams, $location
 
 });
 
-app.controller('geneController', function($scope, $state, $stateParams) {
+app.controller('geneController', function($scope, $state, $stateParams, $location, $anchorScroll, geneService) {
+	geneService.getAll()
+    .then(res => {
+        $scope.genes = res.data;
+        var genes = $scope.genes;
+        console.log(genes);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+	
+	      
+    $scope.myModel = {
+        Url: 'http://www.linkd.us/#/',
+        Name: "I like linkd!"
+    };
+      
+	$scope.likeIt = (gene) => {
+		gene.likes += 1;
+		console.log('likes:', gene.likes);
+		geneService.updateLikes(gene)
+		.then(res => {
+			console.log('gene.likes:', $scope.genes.likes);
+
+		})
+	}	
+	$scope.dislikeIt = (gene) => {
+		gene.dislikes += 1;
+		geneService.updateDislikes(gene)
+		.then(res => {
+			console.log('gene.dislikes:', $scope.genes.dislikes);
+		})	
+	}
+
+	$scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+    } 
+});
+
+app.controller('louiseController', function($scope, $state, $location, $anchorScroll, $stateParams) {
 
 
 });
 
-app.controller('louiseController', function($scope, $state, $stateParams) {
-
-
-});
-
-app.controller('lindaController', function($scope, $state, $stateParams, lindaService) {
+app.controller('lindaController', function($scope, $state, $stateParams, $location, $anchorScroll, lindaService) {
 	lindaService.getAll()
     .then(res => {
         $scope.lindas = res.data;
@@ -90,13 +125,16 @@ app.controller('lindaController', function($scope, $state, $stateParams, lindaSe
 		lindaService.updateDislikes(linda)
 		.then(res => {
 			console.log('linda.dislikes:', $scope.lindas.dislikes);
-		})
-		
+		})	
 	}
 
+	$scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+    } 
 });
 
-app.controller('tinaController', function($scope, $state, $stateParams, tinaService) {
+app.controller('tinaController', function($scope, $state, $stateParams, $location, $anchorScroll, tinaService) {
 	tinaService.getAll()
     .then(res => {
         $scope.tinas = res.data;
@@ -119,7 +157,6 @@ app.controller('tinaController', function($scope, $state, $stateParams, tinaServ
 		tinaService.updateLikes(tina)
 		.then(res => {
 			console.log('tina.likes:', $scope.tinas.likes);
-
 		})
 	}	
 	$scope.dislikeIt = (tina) => {
@@ -127,9 +164,11 @@ app.controller('tinaController', function($scope, $state, $stateParams, tinaServ
 		tinaService.updateDislikes(tina)
 		.then(res => {
 			console.log('tina.dislikes:', $scope.tinas.dislikes);
-		})
-		
+		})	
 	}
-
+	$scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+    } 
 });
 

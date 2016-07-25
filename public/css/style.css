@@ -116,49 +116,49 @@ a i.fa-home {
 	color: #fff;
 }
 
-#bobs ul li.quote, #lindas ul li.quote, #tinas ul li.quote {
-	font-size: 1.3em;
+#bobs ul li.quote, #lindas ul li.quote, #tinas ul li.quote #genes ul li.quote{
+	font-size: 1.5em;
 }
 
-#bobs h2, #lindas h2, #tinas h2 {
+#bobs h2, #lindas h2, #tinas h2, #genes h2 {
 	margin: 2% 0 2% 2%;
 }
 
-#bobs img, #lindas img, #tinas img {
+#bobs img, #lindas img, #tinas img, #genes img {
 	width: 100%;
 	height: 450px;
 }
 
-#bobs ul li.episode, #lindas ul li.episode, #tinas ul li.episode {
+#bobs ul li.episode, #lindas ul li.episode, #tinas ul li.episode, #genes ul li.episode {
 	font-size: .8em;
 	margin-bottom: 5%;
 }
 
-#bobs div ul a.button, #lindas div ul a.button, #tinas div ul a.button {
+#bobs div ul a.button, #lindas div ul a.button, #tinas div ul a.button, #genes div ul a.button {
 	background-color: #2A7FB8;
 	display: inline-block;
 }
 
-#bobs div ul a.button:hover, #lindas div ul a.button:hover, #tinas div ul a.button:hover {
+#bobs div ul a.button:hover, #lindas div ul a.button:hover, #tinas div ul a.button:hover, #genes div ul a.button:hover {
 	background-color: #1c577f;
 	display: inline-block;
 }
 
-#bobs div.each, #lindas div.each, #tinas div.each {
+#bobs div.each, #lindas div.each, #tinas div.each, #genes div.each {
 	margin-top: 5%;
 	margin-left: 5%;
 }
 
-#bobs div ul, #lindas div ul, #tinas div ul {
+#bobs div ul, #lindas div ul, #tinas div ul, #genes div ul {
 	list-style-type: none;
 	padding: 15px;
 }
 
-#bobs div.quotesRow, #lindas div.quotesRow, #tinas div.quotesRow {
+#bobs div.quotesRow, #lindas div.quotesRow, #tinas div.quotesRow, #genes div.quotesRow {
 	margin-top: -2%;
 }
 
-#bobs i.fa, #lindas i.fa, #tinas i.fa {
+#bobs i.fa, #lindas i.fa, #tinas i.fa, #genes i.fa  {
 	margin-left: 10%;
 }
 
@@ -186,11 +186,11 @@ a i.fa-home {
 		max-height: 100px;
   	}
 
-	#bobs img, #lindas img, #tinas img  {
+	#bobs img, #lindas img, #tinas img, #genes img  {
 		width: 100%;
 		height: 300px;
 	}
-	#bobLikes, #lindaLikes, #tinaLikes {
+	#bobLikes, #lindaLikes, #tinaLikes, #geneLikes  {
 		width: 80%;
 		font-size: .6em;
 		padding: 1em;
@@ -198,18 +198,18 @@ a i.fa-home {
 		margin-right: 5%;
 
 	}
-	#bobDislikes, #lindaDislikes, #tinaDislikes {
+	#bobDislikes, #lindaDislikes, #tinaDislikes, #geneDislikes {
 		width: 80%;
 		font-size: .6em;
 		padding: 1em;
 		padding-right: 4em;
 	}
 	
-	#bobs div label.fa, #lindas div label.fa, #tinas div label.fa  {
+	#bobs div label.fa, #lindas div label.fa, #tinas div label.fa, #genes div label.fa  {
 		font-size: .8em;
 
 	}
-	#bobs div.quotesRow, #lindas div.quotesRow, #tinas div.quotesRow {
+	#bobs div.quotesRow, #lindas div.quotesRow, #tinas div.quotesRow, #genes div.quotesRow  {
 		text-align: center;
 	}
 

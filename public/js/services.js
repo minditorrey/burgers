@@ -38,3 +38,17 @@ app.service('tinaService', function($http) {
     }
 })
 
+app.service('geneService', function($http) {
+    this.getAll = () => {
+      return $http.get('/api/gene');
+    };
+    this.updateLikes = gene => {
+      return $http.put(`/api/gene/likes/${gene._id}`, gene);
+    }
+    this.updateDislikes = gene => {
+      return $http.put(`/api/gene/dislikes/${gene._id}`, gene);
+    }
+})
+
+
+
