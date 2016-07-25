@@ -89,8 +89,42 @@ app.controller('geneController', function($scope, $state, $stateParams, $locatio
     } 
 });
 
-app.controller('louiseController', function($scope, $state, $location, $anchorScroll, $stateParams) {
-
+app.controller('louiseController', function($scope, $state, $location, $anchorScroll, $stateParams, louiseService) {
+	louiseService.getAll()
+    .then(res => {
+        $scope.louises = res.data;
+        var louises = $scope.louises;
+        console.log(louises);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+	
+	      
+    $scope.myModel = {
+        Url: 'http://www.linkd.us/#/',
+        Name: "I like linkd!"
+    };
+      
+	$scope.likeIt = (louise) => {
+		louise.likes += 1;
+		console.log('likes:', louise.likes);
+		louiseService.updateLikes(louise)
+		.then(res => {
+			console.log('louise.likes:', $scope.louises.likes);
+		})
+	}	
+	$scope.dislikeIt = (louise) => {
+		louise.dislikes += 1;
+		louiseService.updateDislikes(louise)
+		.then(res => {
+			console.log('louise.dislikes:', $scope.louises.dislikes);
+		})	
+	}
+	$scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+    } 
 
 });
 

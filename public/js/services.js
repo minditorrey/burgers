@@ -50,5 +50,17 @@ app.service('geneService', function($http) {
     }
 })
 
+app.service('louiseService', function($http) {
+    this.getAll = () => {
+      return $http.get('/api/louise');
+    };
+    this.updateLikes = louise => {
+      return $http.put(`/api/louise/likes/${louise._id}`, louise);
+    }
+    this.updateDislikes = louise => {
+      return $http.put(`/api/louise/dislikes/${louise._id}`, louise);
+    }
+})
+
 
 
